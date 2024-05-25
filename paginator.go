@@ -23,3 +23,8 @@ func NewPaginator(pageIndex, pageSize, total int, items interface{}) *Paginator 
 func getPages(total, pageSize int) int {
 	return (total + pageSize - 1) / pageSize
 }
+
+// GetOffset Offset sets the first node to return from the query
+func GetOffset(pageIndex, pageSize int) int {
+	return (pageIndex - 1) * pageSize
+}
