@@ -1,11 +1,11 @@
 package paging
 
 type Paginator struct {
-	PageIndex int
-	PageSize  int
-	Pages     int
-	Total     int
-	Items     interface{}
+	PageIndex int         `json:"pageIndex"`
+	PageSize  int         `json:"pageSize"`
+	Pages     int         `json:"pages"`
+	Total     int         `json:"total"`
+	Items     interface{} `json:"items"`
 }
 
 func NewPaginator(pageIndex, pageSize, total int, items interface{}) *Paginator {
